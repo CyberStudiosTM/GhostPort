@@ -3,7 +3,7 @@ requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"
 
 [project]
-name = "ghostport"
+name = "ghostport-cli"
 dynamic = ["version"]
 description = "A tiny forensic CLI for diagnosing local TCP ports and unexpected HTTP services."
 readme = "README.md"

@@ -50,6 +50,14 @@ GhostPort is an independent CyberStudios™ project. It does not require CyberCo
 
 **Requirements:** Python 3.11 or newer.
 
+### Install from PyPI
+
+```bash
+python -m pip install ghostport-cli
+```
+
+The PyPI package is named `ghostport-cli`; the command and import name are `ghostport`.
+
 ### Install from GitHub
 
 ```bash
