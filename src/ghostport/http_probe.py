@@ -105,12 +105,12 @@ def probe_http(
         return _failure("timeout", shown_url, f"no HTTP response within {timeout:g}s", expect_json)
     except httpx.ConnectError:
         return _failure("error", shown_url, "connection failed before HTTP began", expect_json)
-    except httpx.RemoteProtocolError:
+    except (httpx.RemoteProtocolError, httpx.ReadError, httpx.WriteError):
         return _failure(
             "error",
             shown_url,
             "port is open but did not return a valid HTTP response "
-            "(it may speak another protocol, such as TLS or raw TCP)",
+            "(it may speak another protocol, such as TLS or raw TCP, or reset the connection)",
             expect_json,
         )
     except httpx.HTTPError as exc:
