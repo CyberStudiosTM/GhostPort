@@ -40,8 +40,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/cyberthreed/GhostPort"
-Issues = "https://github.com/cyberthreed/GhostPort/issues"
+Homepage = "https://github.com/CyberStudiosTM/GhostPort"
+Issues = "https://github.com/CyberStudiosTM/GhostPort/issues"
 
 [project.scripts]
 ghostport = "ghostport.cli:main"

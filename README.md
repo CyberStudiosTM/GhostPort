@@ -28,7 +28,7 @@ In a real terminal the panel uses rounded borders and a pastel palette (lavender
 Requires Python 3.11+.
 
 ```
-pip install git+https://github.com/cyberthreed/GhostPort.git
+pip install git+https://github.com/CyberStudiosTM/GhostPort.git
 ```
 
 Or from a checkout:
