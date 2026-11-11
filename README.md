@@ -1,3 +1,9 @@
+<div align="center">
+
+<img src="assets/branding/ghostport-banner.png" alt="GhostPort banner: a pixel-art ghost with an Ethernet cable tail beside retro desktop windows, with the tagline Your friendly localhost investigator." width="100%">
+
+</div>
+
 # 👻 GhostPort
 
 <div align="center">
@@ -11,7 +17,7 @@
 ![Python](https://img.shields.io/badge/Python-3.11%2B-BDA9F2?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-A9E8DC?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-B9DDF6?style=flat-square)
-![Version](https://img.shields.io/badge/Version-0.1.0-F4C7E8?style=flat-square)
+![Version](https://img.shields.io/badge/Version-0.1.1-F4C7E8?style=flat-square)
 
 [Getting Started](#-getting-started) · [Commands](#-commands) · [How It Works](#-how-it-works) · [Safety](#-safety--privacy) · [Contributing](CONTRIBUTING.md)
 
@@ -152,24 +158,31 @@ ghostport inspect 5432 --verbose
 
 ## ✧ Example Output
 
-This example comes from a local GhostPort test against a Python HTTP server.
+This is real output from `ghostport inspect 8765 --http --expect-json`, run against a temporary local Python JSON test server.
+
+<div align="center">
+
+<img src="assets/screenshots/ghostport-terminal.png" alt="Terminal screenshot of GhostPort inspecting localhost port 8765: TCP open, process python.exe, HTTP 200 application/json, and a passing JSON media type check." width="90%">
+
+</div>
 
 ```text
-$ ghostport inspect 8765 --http --expect-json
-
-ghostport v0.1.0 · localhost:8765
-
-TCP       [+] open on 127.0.0.1 · 1.11 ms
-PROCESS   [+] python.exe · pid 17724
-HTTP      [+] 200 · text/html; charset=utf-8
-              403.44 ms · SimpleHTTP/0.6 Python/3.11.9
-JSON      [x] Content-Type is not a JSON media type
-
-Port is open, but the HTTP check did not pass.
-This does not identify the service.
+╭─ ghostport v0.1.1  localhost:8765 ─────────────────────────────────────────────────╮
+│                                                                                    │
+│  TCP      [+] open on 127.0.0.1  3.82 ms                                           │
+│  PROCESS  [+] python.exe  pid 21676                                                │
+│  HTTP     [+] 200  application/json  442.06 ms  server: BaseHTTP/0.6               │
+│           Python/3.11.9                                                            │
+│  JSON     [+] Content-Type 'application/json' is a JSON media type (body was not   │
+│           inspected)                                                               │
+│                                                                                    │
+│  Port is accepting connections. These checks do not conclusively identify the      │
+│  service.                                                                          │
+│                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
-The actual terminal interface uses rounded panels and a pastel color palette. GhostPort also respects `NO_COLOR`.
+The terminal interface uses rounded panels and a pastel color palette. GhostPort also respects `NO_COLOR`.
 
 ---
 
@@ -205,7 +218,7 @@ GhostPort provides a stable, versioned JSON report format.
 {
   "schema_version": 1,
   "tool": "ghostport",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "ok": true,
   "exit_code": 0,
   "target": {
@@ -316,6 +329,23 @@ Want to help improve GhostPort? Read [CONTRIBUTING.md](CONTRIBUTING.md).
 GhostPort is part of **CyberStudios™**, a creative software ecosystem exploring development tools, game systems, digital environments, and interactive experiences.
 
 Small tools deserve thoughtful engineering, too.
+
+### Meet Portgeist
+
+Portgeist is GhostPort's pixel-art mascot: a friendly little network caretaker with cursor eyes and an Ethernet cable tail. These poses are decorative and do not represent diagnostic results.
+
+<div align="center">
+
+| Connected | Sleeping | Confused |
+|:---:|:---:|:---:|
+| <img src="assets/branding/portgeist-connected.png" alt="Portgeist with glowing cursor eyes and signal sparkles" width="160"> | <img src="assets/branding/portgeist-sleeping.png" alt="Portgeist with closed eyes and a floating z" width="160"> | <img src="assets/branding/portgeist-confused.png" alt="Portgeist leaning with mismatched eyes and a question mark" width="160"> |
+</div>
+
+<div align="center">
+
+<img src="assets/animation/portgeist-idle.gif" alt="Portgeist floating gently and blinking its cursor eyes" width="160">
+
+</div>
 
 **Developed under CyberStudios™.**
 

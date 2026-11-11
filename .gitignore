@@ -9,3 +9,5 @@ dist/
 .ruff_cache/
 .coverage
 htmlcov/
+tools/branding/*.png
+tools/branding/*.gif
