@@ -14,10 +14,10 @@
 
 **A CyberStudios™ developer utility**
 
-![Python](https://img.shields.io/badge/Python-3.11%2B-BDA9F2?style=flat-square)
-![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-A9E8DC?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-B9DDF6?style=flat-square)
-![Version](https://img.shields.io/badge/Version-0.1.1-F4C7E8?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3.11%2B-BDA9F2?style=for-the-badge&logo=python&logoColor=202842)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-A9E8DC?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-B9DDF6?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-0.1.1-F4C7E8?style=for-the-badge)
 
 [Getting Started](#-getting-started) · [Commands](#-commands) · [How It Works](#-how-it-works) · [Safety](#-safety--privacy) · [Contributing](CONTRIBUTING.md)
 
